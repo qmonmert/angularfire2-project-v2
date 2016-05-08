@@ -5,6 +5,12 @@
   <title>Angularfire2ProjectV2</title>
   <base href="/">
   {{content-for 'head'}}
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="app/css/angularfire2-project-app.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="app/css/bootstrap/bootstrap.min.css">
+  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +27,14 @@
   -->
 </head>
 <body>
-  <angularfire2-project-v2-app>Loading...</angularfire2-project-v2-app>
+  <angularfire2-project-v2-app>
+    <div id="loader">
+    	<button class="btn btn-lg btn-warning">
+        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> 
+        Loading...
+      </button>
+    </div>  
+  </angularfire2-project-v2-app>
 
   <script src="vendor/es6-shim/es6-shim.js"></script>
   <script src="vendor/reflect-metadata/Reflect.js"></script>

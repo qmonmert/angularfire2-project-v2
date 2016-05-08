@@ -1,0 +1,26 @@
+<ul *ngFor="let activity of activities">
+  <li>
+    <div class="style-sheet-class">
+        <h4 class="{{activity.type}}">{{activity.type}} - {{activity.name}}</h4>
+        <div class="row">
+            <div class="col-xs-4">
+                Distance : {{activity.distance | stravaDistancePipe}}
+            </div>
+            <div class="col-xs-4">
+                Time : {{activity.moving_time | stravaTimePipe}}
+            </div>
+            <div class="col-xs-4" [ngSwitch]="activity.has_heartrate">
+                <span *ngSwitchWhen="true">Heartrate : {{activity.average_heartrate}}</span>
+                <span *ngSwitchWhen="false">Heartrate : -</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="https://www.strava.com/activities/{{activity.id}}" class="strava-link" target="_blank">See the activity on Strava</a>
+            </div>
+        </div>
+    </div>
+  </li>
+</ul>
+<button class="btn btn-info" (click)="moreActivities()">See more</button>
+<button class="btn btn-info" *ngIf="nbActivities > 5" (click)="lessActivities()">See less</button>

@@ -1,0 +1,38 @@
+.style-sheet-class {
+    background-color: #F5F5F5;
+    margin-top: 5px;
+    -moz-box-shadow: #555555 4px 4px 15px;
+    -webkit-box-shadow: #555555 4px 4px 15px;
+    box-shadow: #555555 4px 4px 15px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h4 {
+    color: white;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+h4.Ride {
+    background-color: blue;
+}
+
+h4.Run {
+    background-color: green;
+}
+
+h4.Walk {
+    background-color: red;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+strava-link, strava-link:hover {
+    color: #007FB6;
+}

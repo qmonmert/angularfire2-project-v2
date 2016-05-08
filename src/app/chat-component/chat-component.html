@@ -1,0 +1,25 @@
+<div>
+  
+  <div *ngIf="auth | async">
+    <div *ngIf="auth | async" class="row">
+        <div class="col-xs-2">
+          <img src="{{profileImageURL}}">
+        </div>
+        <div class="col-xs-8">
+          <form-message></form-message>
+        </div>
+        <div class="col-xs-2" align="right">
+          <button (click)='logout()' class="btn btn-danger">Log out</button>
+        </div>
+    </div>
+    <div>
+      <messages></messages>
+    </div>
+  </div>
+
+  <div *ngIf="!(auth | async)">
+    <button (click)='loginTwitter()' class="btn btn-info">Log in with Twitter</button>
+    <button (click)='loginFB()' class="btn btn-primary">Log in with Facebook</button>
+  </div>
+
+</div>

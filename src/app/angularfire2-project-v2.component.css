@@ -1,0 +1,23 @@
+#angularfireapp {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.development {
+  position: absolute;
+  width: 149px;
+  height: 149px;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 1000;
+  background-image: url("app/img/development.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none; 
+}
+
+ul {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,6 @@
+<form (ngSubmit)="sendMessage()" [ngFormModel]="messageForm">
+    <div class="input">
+      <input type="text" id="post" ngControl="messageControl" placeholder="What's up ?" style="width:80%;">
+      <button type="submit" class="btn btn-success">Send</button>
+    </div>
+ </form>
